@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Home.html</title>
+    </head>
+    <body>
+        This is a dummy page which will log out if you remain inactive for 10 seconds.
+        <script>
+        var inactivityTime = function () {
+            var t;
+            window.onload = resetTimer;
+            // DOM Events
+            document.onmousemove = resetTimer;
+            document.onkeypress = resetTimer;
+        
+            function logout() {
+                alert("You are now logged out.")
+                //location.assign("C:\\Users\\Sam\\Desktop\\Web Lab\\Web-Tech-Lab\\Q6_logout.html");
+            }
+        
+            function resetTimer() {
+                clearTimeout(t);
+                t = setTimeout(logout, 10000)
+                // 1000 milisec = 1 sec
+            }
+        };
+        </script>
+    </body>
+</html>
