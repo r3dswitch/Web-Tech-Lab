@@ -1,0 +1,5 @@
+telnet 192.168.183.201 9086
+
+GET http://192.168.183.201:9086/Kolkata15/WISHN/Home.jsp HTTP/1.1
+Host: wishnet.in
+
