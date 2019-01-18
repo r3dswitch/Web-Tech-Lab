@@ -1,0 +1,104 @@
+
+<html>
+
+<head>
+	<title>prog8</title>
+	<style>
+		h1 {
+			font-family: Century Gothic;
+			margin: 20px 0px;
+			cursor: pointer;
+			color: white;
+		}
+
+		#year1 {
+			color: white;
+			font-family: Century Gothic;
+			margin: 0px 0px 0px 520px;
+			font-size: 25px;
+		}
+		#semi1{
+			color: white;
+			font-family: Century Gothic;
+			margin: 0px 550px 0px 0px;
+			font-size: 25px;
+		}
+		#res{
+			font-size: 40px;
+			font-family: Century Gothic;
+			color: #ffffff;
+		}
+	</style>
+
+
+</head>
+
+<body bgcolor="#3b5998">
+	<center>
+		<h1><u><b> JADAVPUR UNIVERSITY</b> </h1>
+	</center></u>
+	<br><br>
+	<label id="year1">YEAR:
+		<select onchange="check()" id="yr">
+
+			<option value="1st">1st</option>
+			<option value="2nd">2nd</option>
+			<option value="3rd">3rd</option>
+			<option value="4th">4th </option>
+		</select>
+	</label>
+	<label id="semi1">
+	SEMESTER:
+	<select id="sem" onchange="check()">
+		<option value="s1st">1st</option>
+		<option value="s2nd">2nd</option>
+	</select>
+	</label>
+	<br><br>
+	<label id="res">RESULT:</label><br><br>
+	<div id="output">
+
+	</div>
+	<script>
+		window.onload = check()
+
+		function check() {
+			var year = document.getElementById("yr").value;
+			var semester = document.getElementById("sem").value;
+			if (year === "1st") {
+				if (semester === "s1st") {
+					document.getElementById("output").innerHTML =
+						"1. C lang  <br>2. ENGLISH  <br>3. Basic electronics  <br>4. EVS   <br>5.NUMERICAL ";
+				} else if (semester === "s2nd") {
+					document.getElementById("output").innerHTML = "1. DSS    <br>2. MATHEMATICAL  <br>3.PHYSICS  <br>4.DIGITAL LOGIC";
+				}
+			} else if (year === "2nd") {
+				if (semester === "s1st") {
+					document.getElementById("output").innerHTML =
+						"1. C++ lang   <br>2. MATH-II  <br>3. ELECTRICAL  <br>4. PHYSICS-IIB   <br>5.DATA SCIENCE ";
+				} else if (semester === "s2nd") {
+					document.getElementById("output").innerHTML = "1. JAVA    <br>2. DBMS  <br>3.NUMERICAL-II  <br>4.GRAPHICS";
+				}
+			} else if (year === "3rd") {
+				if (semester === "s1st") {
+					document.getElementById("output").innerHTML =
+						"1. WEBTECH   <br>2. OS  <br>3. GRAPH THEORY  <br>4. COMPILER   <br>5.MULTIMEDIA ";
+				} else if (semester === "s2nd") {
+					document.getElementById("output").innerHTML = "1. WEBTECH-II    <br>2. DAA  <br>3.SOFTWARE ENGG.  <br>4.MICROPROCESSOR";
+				}
+			} else if (year === "4th") {
+				if (semester === "s1st") {
+					document.getElementById("output").innerHTML =
+						"1.ANIMATION   <br>2. AI  <br>3. ECONOMICS  <br>4. DATA SCIENCE -II";
+				} else if (semester === "s2nd") {
+					document.getElementById("output").innerHTML = "1.GRAPH THEORY-IIB    <br>2. JAVA LAB  <br>3.ROBOTICS  <br>4.SOFTWARE ENGG-II";
+				}
+			}
+
+
+		}
+	</script>
+
+</body>
+
+</html>
