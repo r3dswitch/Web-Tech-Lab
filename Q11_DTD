@@ -1,24 +1,26 @@
 <?xml version="1.0"?>
-<!DOCTYPE Question-Paper [
-<!ELEMENT Question(text,optionA,optionB,optioC,optionD,answer)>
-<!ELEMENT text(#PCDATA)>
-<!ELEMENT optionA(#PCDATA)>
-<!ELEMENT optionB(#PCDATA)>
-<!ELEMENT optionC(#PCDATA)>
-<!ELEMENT optionD(#PCDATA)>
-<!ELEMENT answer(#PCDATA)>
+<!DOCTYPE question-paper [
+<!ELEMENT question-paper (Question*)>
+<!ELEMENT Question (text,optionA,optionB,optionC,optionD,answer)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT optionA (#PCDATA)>
+<!ELEMENT optionB (#PCDATA)>
+<!ELEMENT optionC (#PCDATA)>
+<!ELEMENT optionD (#PCDATA)>
+<!ELEMENT answer (#PCDATA)>
 
-<!ATTLIST question-no CDATA #REQUIRED>
-<!ATTLIST answer-value (optionA|optionB|optionC|optionD) #REQUIRED>
+<!ATTLIST Question no CDATA #REQUIRED>
+<!ATTLIST answer value (optionA|optionB|optionC|optionD) #REQUIRED>
 ]>
 
-<Question-Paper>
-<Question question-no = 1,answer-value = "optionA">
+
+<question-paper>
+<Question no = "1">
 <text>What is the capital of India?</text>
 <optionA>Delhi</optionA>
 <optionB>Kolkata</optionB>
 <optionC>Mumbai</optionC>
 <optionD>Chennai</optionD>
-<answer>optionA</answer>
+<answer value = "optionA"/>
 </Question>
-</Question-Paper>
+</question-paper>
