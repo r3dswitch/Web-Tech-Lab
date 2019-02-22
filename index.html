@@ -1,0 +1,27 @@
+<!-- Consider a web page that locally stores (using IndexDB) the details (such as name, manufacturer, price etc) of different components(e.g. HDD, Monitor etc) of the computer. The web page contains buttons captioned “add”, “show”, “update” and “delete”. When “add” button is clicked, the pages shows a dialog box to get the details of the item to be added and inserts it to the IndexDB. Implement the functionality of the other buttons. Consider (name, manufacturer) as the primary key. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Inventory App</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="page-wrapper">
+    <!-- Form for new Todo Items -->
+    <form id="new-item-form" method="POST" action="#">
+      <input type="text" name="new-item-name" id="name" placeholder="Name" required>
+      <input type="text" name="new-item-man" id="man" placeholder="Manufacturer" required>
+      <input type="text" name="new-item-price" id="price" placeholder="Price" required>
+      <input type="submit" value="Submit">
+    </form>
+  
+    <!-- Todo Item List -->
+    <ul id="items"></ul>
+  </div>
+
+  <script src="db.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
